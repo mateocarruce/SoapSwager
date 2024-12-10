@@ -1,0 +1,45 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "description": "API SOAP para obtener un saludo",
+      "version": "1.0.0",
+      "title": "Servicio SOAP de Saludo"
+    },
+    "host": "localhost:8000",
+    "basePath": "/",
+    "tags": [
+      {
+        "name": "saludo",
+        "description": "Operaciones de saludo"
+      }
+    ],
+    "paths": {
+      "/obtener_saludo": {
+        "post": {
+          "tags": ["saludo"],
+          "summary": "Obtener un saludo personalizado",
+          "operationId": "obtenerSaludo",
+          "parameters": [
+            {
+              "name": "nombre",
+              "in": "body",
+              "description": "Nombre del usuario",
+              "required": true,
+              "schema": {
+                "type": "string"
+              }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "Saludo exitoso",
+              "schema": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
