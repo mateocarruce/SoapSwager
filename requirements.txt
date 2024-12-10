@@ -1,0 +1,4 @@
+spyne
+flask
+flask-swagger-ui
+lxml
